@@ -11,6 +11,11 @@ header {
 	align-items: center;
 }
 
+.logo-img {
+    height: 23px;
+    width : 23px;
+}
+
 .logo-container {
     display: flex;
     flex: 1;
@@ -44,6 +49,7 @@ header {
 
 .search-input {
     border : none;
+    outline: none;
     padding-left: 8px;
 }
 
@@ -51,6 +57,7 @@ header {
     background-color: #3CB371;
     color: white;
     border: none;
+    outline: none;
     border-radius: 25px;
     padding : 10px;
     font-weight: bold;

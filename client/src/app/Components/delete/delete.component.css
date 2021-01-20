@@ -1,0 +1,31 @@
+.input-add{
+    width: 500px;
+    height: 50px;
+    border : solid 2px grey;
+    outline : none;
+    border-radius: 20px;
+    box-shadow: 0 0 2px black;
+}
+
+.dialog-button{
+    width: 80px;
+    height: 40px;
+    border : none;
+    border-radius: 25px;
+    outline : none;
+    background-color: #DCDCDC;
+    color: 	#808080;
+}
+
+#cancel{
+    background-color: white;
+}
+
+#cancel:hover{
+    background-color: #DCDCDC;
+}
+
+.buttons{
+    position: absolute;
+    left : 55%;
+}

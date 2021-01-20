@@ -1,1 +1,9 @@
-<p>add works!</p>
+<h1 mat-dialog-title>Add a new photo </h1>
+<div mat-dialog-content>
+  <p>Label</p>
+  <input class="input-add" matInput placeholder="Suspendisse elit massa" [(ngModel)]="data.label">
+</div>
+<div mat-dialog-actions class="buttons">
+  <button mat-button id="cancel" class="dialog-button" (click)="onNoClick()">Cancel</button>
+  <button mat-button class="dialog-button" [mat-dialog-close]="data.label" cdkFocusInitial>Submit</button>
+</div>
