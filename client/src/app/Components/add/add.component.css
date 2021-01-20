@@ -5,6 +5,8 @@
     outline : none;
     border-radius: 20px;
     box-shadow: 0 0 2px black;
+    margin-bottom: 10px;
+    padding-left: 15px;
 }
 
 .dialog-button{

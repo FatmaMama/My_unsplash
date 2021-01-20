@@ -7,17 +7,30 @@ body {
 }
 
 .big-container {
-    /* max-width: 60rem;
-    margin : 0 auto; */
+    padding-top: 40px;
+    /* position: relative;
+    max-width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: masonry
+    grid-template-rows: minmax(300px, auto);
+    margin: 20px;
+    grid-gap: 10px; */
+    column-count: 3;
+    column-gap: 1em;
 }
 
-.content {
+.content { /* Masonry bricks or child elements */
     position: relative;
-    width: 400px;
-}
+    background-color: #eee;
+    display: inline-block;
+    margin: 0 0 1em;
+    width: 100%;
+  }
+
+ /* .content {
+    position: relative;
+    width: 350px;
+} */
 
 .image{
     border-radius: 25px;
@@ -34,7 +47,7 @@ body {
     background: rgba(0, 0, 0, 0.6);
     border-radius: 25px;
     color: #ffffff;
-    display: flex;
+    display: flex; 
     /* flex-direction: column;
     align-items: center;
     justify-content: center; */

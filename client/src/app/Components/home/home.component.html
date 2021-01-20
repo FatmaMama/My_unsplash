@@ -1,13 +1,13 @@
 <div class="big-container">
-    <div class="box">
-        <div class="content" *ngFor="let photo of photos">
+    
+    <div class="content" *ngFor="let photo of photos">
             <img class="image" src="{{photo}}" />
             <div class="image-overlay">
                 <div class="title">Title</div>
                 <button class="btn-delete" (click)="openDialog()"><strong>Delete</strong></button>
             </div>
             
-        </div>
+        
     </div>
 </div>
 
