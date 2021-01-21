@@ -1,10 +1,11 @@
 <div class="big-container">
     
-    <div class="content" *ngFor="let photo of photos">
-            <img class="image" src="{{photo}}" />
+    <div class="content" *ngFor="let photo of photos; let i = index"
+    [class.active]="i == currentIndex">
+            <img class="image" src="{{photo.url}}" />
             <div class="image-overlay">
-                <div class="title">Title</div>
-                <button class="btn-delete" (click)="openDialog()"><strong>Delete</strong></button>
+                <div class="title">{{photo.label}}</div>
+                <button class="btn-delete" (click)="setActivePhoto(photo, i); openDialog()"><strong>Delete</strong></button>
             </div>
             
         

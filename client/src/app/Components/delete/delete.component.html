@@ -1,10 +1,11 @@
 <h1 mat-dialog-title>Are you sure? </h1>
 <div mat-dialog-content>
   <p>Enter image label to confirm</p>
-  <input class="input-add" matInput placeholder="" >
+  <input class="input-add" matInput placeholder="{{label}}" [(ngModel)]= "labelDelete">
 </div>
 <div mat-dialog-actions class="buttons">
-  <button mat-button id="cancel" class="dialog-button" (click)="onNoClick()">Cancel</button>
-  <button mat-button class="dialog-button"  cdkFocusInitial>Submit</button>
+  <button mat-button id="cancel" class="dialog-button" (click)="onNoClick()"><strong>Cancel</strong></button>
+  <button mat-button class="dialog-button" [style.background-color]="changeBackgroundColor(label, labelDelete)" 
+  [style.color]="changeColor(label, labelDelete)" (click)="deletePhoto()" cdkFocusInitial><strong>Submit</strong></button>
 </div>
 

@@ -3,9 +3,10 @@
   <p>Label</p>
   <input class="input-add" matInput placeholder="Suspendisse elit massa" [(ngModel)]="data.label">
   <p>URL</p>
-  <input class="input-add" matInput placeholder="http://images.unsplash.com" [(ngModel)]="data.label">
+  <input class="input-add" matInput placeholder="http://images.unsplash.com" [(ngModel)]="data.url">
 </div>
 <div mat-dialog-actions class="buttons">
   <button mat-button id="cancel" class="dialog-button" (click)="onNoClick()">Cancel</button>
-  <button mat-button class="dialog-button" [mat-dialog-close]="data.label" cdkFocusInitial>Submit</button>
+  <button mat-button class="dialog-button" (click)="save()" cdkFocusInitial>Submit</button>
 </div>
+

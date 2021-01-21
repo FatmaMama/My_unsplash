@@ -72,6 +72,12 @@ body {
     width: 80px;
 }
 
+.btn-delete:hover{
+    color: white;
+    background-color: #ef5350 ;
+    border: solid 2px #ef5350
+}
+
 .title{
     position: absolute;
     top: 85%;

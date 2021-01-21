@@ -64,7 +64,8 @@ exports.create = (req, res) => {
 
 
   exports.delete = (req, res) => {
-    const id = req.params.id;
+    console.log ("DELETE DATA :", req.body)
+    const id = req.body;
   
     Photo.destroy({
       where: { id: id }

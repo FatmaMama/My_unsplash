@@ -10,10 +10,10 @@ module.exports = app => {
     router.get("/", photos.findAll);
 
     // Retrieve a single photo with id
-    router.get("/:id", photos.findOne);
+    router.get("/", photos.findOne);
 
    // Delete a photo with id
-    router.delete("/:id", photos.delete);
+    router.delete("/", photos.delete);
 
 
     app.use('/api/photos', router);
