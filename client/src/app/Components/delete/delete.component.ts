@@ -67,9 +67,10 @@ export class DeleteComponent {
   //       });
   // }
 
+ 
   deletePhoto(): void {
     this.dialogRef.close();
-    this.photoService.delete(this.id)
+    this.photoService.delete(this.label)
       .subscribe(
         response => {
           console.log("delete photo",response);

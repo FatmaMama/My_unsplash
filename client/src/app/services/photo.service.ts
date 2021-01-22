@@ -25,8 +25,8 @@ export class PhotoService {
   }
 
  
-  delete(id: any): Observable<any> {
-    return this.http.delete(baseUrl, id);
+  delete(label: any): Observable<any> {
+    return this.http.delete(`${baseUrl}?label=${label}`);
   }
 
 
