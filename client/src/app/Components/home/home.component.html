@@ -1,6 +1,28 @@
+<header>
+    <div class="logo-container">
+        <img class="logo-img" src="/assets/images/unsplash.png" alt="logo" />
+        <div class="logo">
+            <div class="title-logo" ><strong>My unsplash</strong></div>
+            <div class="sub-title">devchallenges.io</div>
+        </div>
+    </div>
+
+    <div class="search-bar">
+        <div class="search">
+            <span class="glyphicon glyphicon-search"></span>
+            <input class="search-input" type="text"  placeholder="Search by name" [(ngModel)]="searchInput" />
+        </div>
+        
+    </div>
+
+    <div class="add">
+        <button class="add-button" (click)="openDialogAdd()">Add a photo</button>
+    </div>
+</header>
+
 <div class="big-container">
     
-    <div class="content" *ngFor="let photo of photos; let i = index"
+    <div class="content" *ngFor="let photo of photos | search : searchInput ; let i = index"
     [class.active]="i == currentIndex">
             <img class="image" src="{{photo.url}}" />
             <div class="image-overlay">

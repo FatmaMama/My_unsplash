@@ -84,3 +84,75 @@ body {
     left: 5%;
     font-size: 20px;
 }
+
+/* */
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+header {
+    
+	display: flex;
+	width: 90%;
+	height: 10vh;
+	margin: auto;
+	align-items: center;
+}
+
+.logo-img {
+    height: 23px;
+    width : 23px;
+}
+
+.logo-container {
+    display: flex;
+    flex: 1;
+}
+
+.search-bar {
+    flex: 2;
+}
+
+.add {
+    display: flex;
+    flex: 3;
+    justify-content: flex-end;
+}
+
+.title-logo {
+    font-size: 20px;
+}
+
+
+
+.search {
+    border: solid 2px grey;
+    border-radius: 25px;
+    box-shadow: 0 0 2px black;
+    padding: 10px;
+    padding-left: 8px;
+    font-size: 15px;
+    width: 250px;
+}
+
+.search-input {
+    border : none;
+    outline: none;
+    padding-left: 8px;
+}
+
+.add-button {
+    background-color: #3CB371;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding : 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.add-button:hover{
+    background-color: #2E8B57;
+}
