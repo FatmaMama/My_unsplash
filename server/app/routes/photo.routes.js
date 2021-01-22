@@ -9,8 +9,7 @@ module.exports = app => {
     // Retrieve all photos
     router.get("/", photos.findAll);
 
-    // Retrieve a single photo with id
-    router.get("/", photos.findOne);
+   
 
    // Delete a photo with id
     router.delete("/", photos.delete);

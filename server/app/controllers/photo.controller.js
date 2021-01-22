@@ -48,28 +48,38 @@ exports.create = (req, res) => {
   };
 
 
-  exports.findOne = (req, res) => {
-    const id = req.params.id;
-  
-    Photo.findByPk(id)
-      .then(data => {
-        res.send(data);
-      })
-      .catch(err => {
-        res.status(500).send({
-          message: "Error retrieving Photo with id=" + id
-        });
-      });
-  };
 
 
-  exports.delete = (req, res) => {
-    console.log ("DELETE DATA :", req.body)
-    const id = req.body;
+  // exports.delete = (req, res) => {
+  //   console.log ("DELETE DATA :", req.body)
+  //   const id = req.body;
   
-    Photo.destroy({
-      where: { id: id }
-    })
+  //   Photo.destroy({
+  //     where: { id: id }
+  //   })
+  //     .then(num => {
+  //       if (num == 1) {
+  //         res.send({
+  //           message: "Photo was deleted successfully!"
+  //         });
+  //       } else {
+  //         res.send({
+  //           message: `Cannot delete Photo with id=${id}. Maybe Photo was not found!`
+  //         });
+  //       }
+  //     })
+  //     .catch(err => {
+  //       res.status(500).send({
+  //         message: "Could not delete Tutorial with id=" + id
+  //       });
+  //     });
+  // };
+
+exports.delete = (req, res) => {
+  const label = req.query.label;
+  var condition = label ? { label: { [Op.iLike]: `%${label}%` } } : null;
+  
+    Photo.destroy({ where: condition })
       .then(num => {
         if (num == 1) {
           res.send({
@@ -87,5 +97,3 @@ exports.create = (req, res) => {
         });
       });
   };
-
-
