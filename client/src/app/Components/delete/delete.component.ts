@@ -17,7 +17,7 @@ export class DeleteComponent {
   label: string;
   id : any;
   labelDelete: string;
- 
+  
 
   constructor(private photoService: PhotoService,
     private route: ActivatedRoute,
@@ -53,6 +53,14 @@ export class DeleteComponent {
       color = "white"
     }
     return color;
+}
+
+activeButton (x: any,y: any){
+  let isActive = true;
+  if (x === y){
+    isActive = false;
+  }
+  return isActive
 }
 
   // getPhoto(id: string): void {
